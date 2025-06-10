@@ -92,21 +92,28 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image and Progress */}
+          {/* Hero Video and Progress */}
           <div className="relative animate-fade-in">
             <Card className="p-6 bg-white/95 backdrop-blur-sm shadow-2xl border-0">
-              {/* Hero Image Placeholder */}
+              {/* YouTube Video Principal */}
               <div className="relative mb-6">
-                <div className="aspect-[4/3] bg-gradient-to-br from-davi-green-light/20 to-davi-blue/20 rounded-lg flex items-center justify-center overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&w=800&q=80"
-                    alt="Davi, um menino sorridente de 6 anos"
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
-                    <p className="text-white font-semibold text-lg">Davi, 6 anos</p>
-                    <p className="text-white/90 text-sm">Um sorriso que ilumina nossa luta</p>
-                  </div>
+                <div className="aspect-video rounded-lg overflow-hidden bg-gray-100">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/Hg709BnHEHE"
+                    title="Vídeo do Davi Luiz"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="text-davi-green-dark font-semibold text-lg">🧒 Davi Luiz Pellizzari Rodrigues</p>
+                  <p className="text-gray-600 text-sm">🌎 Canelinha/SC</p>
+                  <p className="text-gray-600 text-sm">📝 Diagnosticado com DMD</p>
+                  <p className="text-davi-blue text-sm font-medium">🏦 Pix: CPF 141.897.869-85</p>
                 </div>
               </div>
 
@@ -137,6 +144,33 @@ const HeroSection = () => {
               </div>
             </Card>
           </div>
+        </div>
+
+        {/* Vídeo do Pai - Seção adicional */}
+        <div className="mt-20 max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-davi-green-dark mb-4">
+              Palavras do Pai
+            </h2>
+            <p className="text-gray-700">
+              Ouça o relato emocionante do pai do Davi sobre a luta pela vida de seu filho
+            </p>
+          </div>
+          
+          <Card className="p-6 bg-white/95 backdrop-blur-sm shadow-xl border-0">
+            <div className="aspect-video rounded-lg overflow-hidden bg-gray-100">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/yQDyZ7aF88Y"
+                title="Relato do pai do Davi Luiz"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </Card>
         </div>
       </div>
 
