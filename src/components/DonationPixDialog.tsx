@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Pix } from "@/lib/pix";
-import QRCode from "qrcode";
+import * as QRCode from "qrcode";
 import { FiCopy, FiRefreshCw } from "react-icons/fi";
 import { BsQrCode } from "react-icons/bs";
 
@@ -228,3 +229,4 @@ export default function DonationPixDialog({ open, onOpenChange }: DonationPixDia
     </Dialog>
   );
 }
+
