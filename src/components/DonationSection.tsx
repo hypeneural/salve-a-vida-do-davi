@@ -1,12 +1,19 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Copy, QrCode, ExternalLink, Share2, Users, Instagram, MessageCircle } from 'lucide-react';
+import { Copy, ExternalLink, Users } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import DonationPixDialog from './DonationPixDialog';
+import { FaWhatsapp, FaInstagram, FaPix } from 'react-icons/fa';
+import { BsQrCode, BsBank } from 'react-icons/bs';
+import { FiShare2, FiUsers, FiHeart } from 'react-icons/fi';
+import { AiOutlineGift } from 'react-icons/ai';
 
 const DonationSection = () => {
   const { toast } = useToast();
   const [copiedPix, setCopiedPix] = useState(false);
+  const [pixDialogOpen, setPixDialogOpen] = useState(false);
   
   const pixKey = "141.897.869-85";
   const whatsappGroup = "https://wa.me/5511999999999";
@@ -25,24 +32,24 @@ const DonationSection = () => {
   const shareOptions = [
     {
       name: "WhatsApp",
-      icon: MessageCircle,
+      icon: FaWhatsapp,
       url: `https://wa.me/?text=Ajude%20a%20salvar%20a%20vida%20do%20Davi!%20Uma%20criança%20de%206%20anos%20precisa%20do%20nosso%20apoio%20para%20conseguir%20o%20tratamento%20contra%20DMD.%20Saiba%20mais:%20https://salveavidadodavi.com`,
-      color: "text-green-600"
+      color: "text-green-600 hover:bg-green-50"
     },
     {
       name: "Instagram",
-      icon: Instagram,
+      icon: FaInstagram,
       url: "https://instagram.com",
-      color: "text-purple-600"
+      color: "text-purple-600 hover:bg-purple-50"
     }
   ];
 
   const donationAmounts = [
-    { value: 20, description: "Ajuda com medicamentos básicos" },
-    { value: 50, description: "Contribui para exames médicos" },
-    { value: 100, description: "Apoia a família nas necessidades" },
-    { value: 500, description: "Faz uma diferença significativa" },
-    { value: 1000, description: "É um grande passo rumo à cura" }
+    { value: 20, description: "Ajuda com medicamentos básicos", icon: "💊" },
+    { value: 50, description: "Contribui para exames médicos", icon: "🏥" },
+    { value: 100, description: "Apoia a família nas necessidades", icon: "🤝" },
+    { value: 500, description: "Faz uma diferença significativa", icon: "⭐" },
+    { value: 1000, description: "É um grande passo rumo à cura", icon: "🎯" }
   ];
 
   return (
@@ -50,7 +57,7 @@ const DonationSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-flex items-center px-4 py-2 rounded-full bg-davi-yellow/20 text-davi-green-dark text-sm font-medium mb-4">
-            <Users className="w-4 h-4 mr-2" />
+            <FiHeart className="w-4 h-4 mr-2" />
             Sua doação transforma o futuro do Davi
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-davi-green-dark mb-6">
@@ -78,17 +85,25 @@ const DonationSection = () => {
           <Card className="p-8 border-2 border-davi-green-light/30 bg-gradient-to-br from-davi-green-light/5 to-white">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-davi-green-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <QrCode className="w-8 h-8 text-davi-green-dark" />
+                <FaPix className="w-8 h-8 text-davi-green-dark" />
               </div>
               <h3 className="text-2xl font-bold text-davi-green-dark mb-2">PIX - Mais Rápido</h3>
               <p className="text-gray-600">Transferência instantânea e segura</p>
             </div>
 
             <div className="space-y-4">
+              <Button
+                onClick={() => setPixDialogOpen(true)}
+                className="w-full bg-davi-green-light hover:bg-davi-green-light/90 text-white font-bold py-3"
+              >
+                <BsQrCode className="w-5 h-5 mr-2" />
+                GERAR QR CODE PIX
+              </Button>
+
               <div className="bg-white p-4 rounded-lg border border-davi-green-light/30">
                 <p className="font-semibold text-davi-green-dark mb-2">Chave PIX (CPF):</p>
                 <div className="flex items-center justify-between bg-gray-50 p-3 rounded border">
-                  <span className="font-mono text-lg">{pixKey}</span>
+                  <span className="font-mono text-sm md:text-base">{pixKey}</span>
                   <Button
                     onClick={handleCopyPix}
                     variant="outline"
@@ -100,13 +115,6 @@ const DonationSection = () => {
                   </Button>
                 </div>
               </div>
-
-              <div className="bg-davi-yellow/10 p-4 rounded-lg text-center">
-                <QrCode className="w-24 h-24 mx-auto mb-3 text-davi-green-dark" />
-                <p className="text-sm text-gray-600">
-                  Escaneie este QR Code com seu app bancário
-                </p>
-              </div>
             </div>
           </Card>
 
@@ -114,7 +122,7 @@ const DonationSection = () => {
           <Card className="p-8 border-2 border-davi-blue/30 bg-gradient-to-br from-davi-blue/5 to-white">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-davi-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ExternalLink className="w-8 h-8 text-davi-green-dark" />
+                <AiOutlineGift className="w-8 h-8 text-davi-green-dark" />
               </div>
               <h3 className="text-2xl font-bold text-davi-green-dark mb-2">Vakinha Online</h3>
               <p className="text-gray-600">Contribua de forma fácil e segura</p>
@@ -129,7 +137,7 @@ const DonationSection = () => {
 
               <Button
                 onClick={() => window.open(vakinhaUrl, '_blank')}
-                className="w-full bg-davi-blue hover:bg-davi-blue/90 text-white font-bold"
+                className="w-full bg-davi-blue hover:bg-davi-blue/90 text-white font-bold py-3"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 DOAR NA VAKINHA
@@ -141,15 +149,15 @@ const DonationSection = () => {
           <Card className="p-8 border-2 border-davi-yellow/30 bg-gradient-to-br from-davi-yellow/5 to-white">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-davi-yellow/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-davi-green-dark" />
+                <BsBank className="w-8 h-8 text-davi-green-dark" />
               </div>
-              <h3 className="text-2xl font-bold text-davi-green-dark mb-2">Outras Formas</h3>
+              <h3 className="text-2xl font-bold text-davi-green-dark mb-2">Transferência</h3>
               <p className="text-gray-600">Mais opções para ajudar</p>
             </div>
 
             <div className="space-y-4">
               <div className="bg-white p-4 rounded-lg border border-davi-yellow/30">
-                <h4 className="font-semibold text-davi-green-dark mb-2">Transferência Bancária:</h4>
+                <h4 className="font-semibold text-davi-green-dark mb-2">Dados Bancários:</h4>
                 <div className="text-sm text-gray-700 space-y-1">
                   <p><strong>Banco:</strong> Itaú</p>
                   <p><strong>Agência:</strong> 1234</p>
@@ -163,7 +171,7 @@ const DonationSection = () => {
                 variant="outline"
                 className="w-full border-davi-green-dark text-davi-green-dark hover:bg-davi-green-dark hover:text-white"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <FaWhatsapp className="w-5 h-5 mr-2" />
                 FALAR CONOSCO
               </Button>
             </div>
@@ -180,14 +188,16 @@ const DonationSection = () => {
             você pode doar e faça a diferença.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {donationAmounts.map((amount) => (
               <Button
                 key={amount.value}
                 onClick={() => window.open(vakinhaUrl, '_blank')}
-                className="bg-davi-yellow hover:bg-davi-yellow/90 text-davi-green-dark font-bold px-6 py-3 text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-davi-yellow hover:bg-davi-yellow/90 text-davi-green-dark font-bold p-4 h-auto flex flex-col items-center gap-2 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                R$ {amount.value} - {amount.description}
+                <span className="text-2xl">{amount.icon}</span>
+                <span className="text-lg">R$ {amount.value}</span>
+                <span className="text-xs text-center leading-tight">{amount.description}</span>
               </Button>
             ))}
           </div>
@@ -197,7 +207,7 @@ const DonationSection = () => {
         <div className="mb-16">
           <Card className="bg-gradient-to-r from-davi-yellow/10 to-davi-blue/10 border border-davi-yellow/30 p-8">
             <div className="text-center mb-6">
-              <Share2 className="w-12 h-12 text-davi-green-dark mx-auto mb-4" />
+              <FiShare2 className="w-12 h-12 text-davi-green-dark mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-davi-green-dark mb-4">
                 Não pode doar agora? Ajude compartilhando!
               </h3>
@@ -213,7 +223,7 @@ const DonationSection = () => {
                   key={option.name}
                   onClick={() => window.open(option.url, '_blank')}
                   variant="outline"
-                  className={`${option.color} border-current hover:bg-current hover:text-white`}
+                  className={`${option.color} border-current transition-all duration-200`}
                 >
                   <option.icon className="w-5 h-5 mr-2" />
                   {option.name}
@@ -225,7 +235,7 @@ const DonationSection = () => {
 
         {/* Volunteer Section */}
         <Card className="bg-gradient-to-r from-davi-green-dark to-davi-blue text-white p-8 text-center">
-          <Users className="w-12 h-12 mx-auto mb-6 opacity-80" />
+          <FiUsers className="w-12 h-12 mx-auto mb-6 opacity-80" />
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
             Seja um Multiplicador da Esperança
           </h3>
@@ -237,11 +247,16 @@ const DonationSection = () => {
             onClick={() => window.open(whatsappGroup, '_blank')}
             className="bg-white text-davi-green-dark hover:bg-gray-100 font-bold px-8 py-3 text-lg"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
+            <FaWhatsapp className="w-5 h-5 mr-2" />
             JUNTAR-SE AOS VOLUNTÁRIOS
           </Button>
         </Card>
       </div>
+
+      <DonationPixDialog 
+        open={pixDialogOpen} 
+        onOpenChange={setPixDialogOpen} 
+      />
     </section>
   );
 };
