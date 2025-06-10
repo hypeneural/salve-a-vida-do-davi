@@ -6,6 +6,7 @@ import DMDSection from '@/components/DMDSection';
 import TreatmentSection from '@/components/TreatmentSection';
 import DonationSection from '@/components/DonationSection';
 import TransparencySection from '@/components/TransparencySection';
+import MediaSection from '@/components/MediaSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 
@@ -20,6 +21,7 @@ const Index = () => {
         <TreatmentSection />
         <DonationSection />
         <TransparencySection />
+        <MediaSection />
         <FAQSection />
       </main>
       <Footer />
