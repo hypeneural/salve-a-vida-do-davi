@@ -5,9 +5,9 @@ import { Card } from '@/components/ui/card';
 import { Copy, ExternalLink, Users } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import DonationPixDialog from './DonationPixDialog';
-import { FaWhatsapp, FaInstagram, FaPix } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { BsQrCode, BsBank } from 'react-icons/bs';
-import { FiShare2, FiUsers, FiHeart } from 'react-icons/fi';
+import { FiShare2, FiUsers, FiHeart, FiCreditCard } from 'react-icons/fi';
 import { AiOutlineGift } from 'react-icons/ai';
 
 const DonationSection = () => {
@@ -85,7 +85,7 @@ const DonationSection = () => {
           <Card className="p-8 border-2 border-davi-green-light/30 bg-gradient-to-br from-davi-green-light/5 to-white">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-davi-green-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaPix className="w-8 h-8 text-davi-green-dark" />
+                <FiCreditCard className="w-8 h-8 text-davi-green-dark" />
               </div>
               <h3 className="text-2xl font-bold text-davi-green-dark mb-2">PIX - Mais Rápido</h3>
               <p className="text-gray-600">Transferência instantânea e segura</p>
