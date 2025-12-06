@@ -8,7 +8,6 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-4 gap-8 mb-12">
-          {/* Logo and Mission */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-12 h-12 rounded-full gradient-davi-hero flex items-center justify-center">
@@ -19,16 +18,15 @@ const Footer = () => {
                 <p className="text-gray-400 text-sm">Juntos pela esperança</p>
               </div>
             </div>
-            
-            <p className="text-gray-400">
-              Nossa missão é proporcionar ao Davi o tratamento necessário para combater a Distrofia Muscular de Duchenne (DMD). 
-              Acreditamos que, com a sua ajuda, podemos transformar a vida dele e oferecer um futuro cheio de esperança e possibilidades.
+
+            <p className="text-gray-400 leading-relaxed">
+              Nossa missão é garantir que o Davi receba o Elevidys, tratamento fundamental contra a Distrofia Muscular
+              de Duchenne. Com a sua ajuda, podemos dar a ele tempo e qualidade de vida.
             </p>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-davi-yellow">Informações de Contato</h4>
+            <h4 className="text-lg font-bold mb-6 text-davi-yellow">Informações de contato</h4>
             <div className="space-y-4">
               <Card className="bg-gray-800 p-4">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -45,15 +43,14 @@ const Footer = () => {
               <Card className="bg-gray-800 p-4">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Heart className="w-5 h-5 text-red-500" />
-                  <span>Apoio e Voluntariado</span>
+                  <span>Apoio e voluntariado</span>
                 </div>
               </Card>
             </div>
           </div>
 
-          {/* Social Media and Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-davi-yellow">Siga Nossa Jornada</h4>
+            <h4 className="text-lg font-bold mb-6 text-davi-yellow">Siga a campanha</h4>
             <div className="space-y-4 mb-6">
               <a
                 href="https://instagram.com"
@@ -64,7 +61,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
                 <span>Instagram</span>
               </a>
-              
+
               <a
                 href="https://wa.me/5511999999999"
                 target="_blank"
@@ -75,26 +72,18 @@ const Footer = () => {
                 <span>WhatsApp</span>
               </a>
             </div>
-            
-            <a
-              href="/transparencia"
-              className="text-gray-300 hover:text-davi-yellow transition-colors block mb-4"
-            >
+
+            <a href="/transparencia" className="text-gray-300 hover:text-davi-yellow transition-colors block mb-4">
               Transparência
             </a>
-            <a
-              href="/faq"
-              className="text-gray-300 hover:text-davi-yellow transition-colors block"
-            >
+            <a href="/faq" className="text-gray-300 hover:text-davi-yellow transition-colors block">
               FAQ
             </a>
           </div>
         </div>
 
-        {/* Divider */}
         <hr className="border-gray-700 mb-8" />
 
-        {/* Remaining Footer Sections */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             &copy; {currentYear} Salve a Vida do Davi. Todos os direitos reservados.

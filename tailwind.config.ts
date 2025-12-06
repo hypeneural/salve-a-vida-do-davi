@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -10,10 +11,17 @@ export default {
 		"./src/**/*.{ts,tsx}",
 	],
 	prefix: "",
-	theme: {
+ theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '1.25rem',
+				sm: '1.5rem',
+				md: '1.75rem',
+				lg: '2rem',
+				xl: '2.25rem',
+				'2xl': '2.5rem'
+			},
 			screens: {
 				'2xl': '1400px'
 			}
@@ -104,5 +112,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

@@ -1,23 +1,23 @@
-
 import { Card } from '@/components/ui/card';
 import { Heart, Star, Smile } from 'lucide-react';
 
 const StorySection = () => {
   return (
-    <section id="historia" className="py-20 bg-gray-50">
+    <section id="historia" className="py-16 sm:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-flex items-center px-4 py-2 rounded-full bg-davi-blue/20 text-davi-blue text-sm font-medium mb-4">
             <Heart className="w-4 h-4 mr-2" />
             Conheça o nosso guerreiro
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-davi-green-dark mb-6">
-            Um Sorriso que Luta Pela Vida:
+          <h2 className="text-4xl lg:text-5xl font-bold text-davi-green-dark mb-6 leading-tight">
+            Um sorriso que luta pela vida:
             <br />
-            <span className="text-davi-blue">A História do Davi</span>
+            <span className="text-davi-blue">a história do Davi</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Davi é um menino de 6 anos cheio de sonhos, alegria e uma força incrível que nos inspira todos os dias.
+            Davi tem 6 anos, é curioso e ama desenhar. Mesmo sentindo o peso da Distrofia Muscular de Duchenne, ele
+            continua sonhando em ser um super-herói — e nós queremos garantir que ele tenha tempo para isso.
           </p>
         </div>
 
@@ -26,31 +26,27 @@ const StorySection = () => {
             <div>
               <h3 className="text-2xl font-bold text-davi-green-dark mb-4 flex items-center">
                 <Smile className="w-6 h-6 mr-2 text-davi-yellow" />
-                O Menino por Trás da Luta
+                O menino por trás da luta
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Davi é uma criança especial, cheia de vida e energia. Ele adora brincar, desenhar e sonha em ser um super-herói quando crescer. 
-                Seu sorriso contagiante e sua personalidade alegre conquistam todos que o conhecem.
+                Davi é alegre, conversa sobre superpoderes e pede para brincar mais um pouco todos os dias. As quedas
+                frequentes e o cansaço vêm aumentando, mas ele não perde a vontade de explorar o mundo.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Apesar dos desafios que enfrenta, Davi mantém sua alegria e curiosidade sobre o mundo. Ele não entende completamente 
-                o que está acontecendo, mas confia nos adultos ao seu redor e continua sendo a luz da família.
+                Quando descobrimos a DMD, o susto virou determinação. Cada consulta, exame e cuidado agora têm um
+                objetivo: ganhar tempo para o Davi viver com qualidade.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-davi-green-dark mb-4">A Descoberta que Mudou Tudo</h3>
+              <h3 className="text-2xl font-bold text-davi-green-dark mb-4">A descoberta que mudou tudo</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Os primeiros sinais começaram de forma sutil. Davi começou a ter dificuldades para subir escadas, 
-                caia com mais frequência e demonstrava cansaço em atividades que antes fazia com facilidade.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Após uma longa jornada de exames e consultas médicas, veio o diagnóstico que mudou a vida de toda a família: 
-                <strong className="text-davi-green-dark"> Distrofia Muscular de Duchenne (DMD)</strong>.
+                O diagnóstico de Distrofia Muscular de Duchenne explicou as quedas, a dificuldade em subir escadas e o
+                cansaço. Também deixou claro que o tempo é decisivo: o tratamento precisa acontecer antes dos 7 anos.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                O mundo dos pais desabou, mas rapidamente se transformou em determinação. Se existe uma chance de ajudar o Davi, 
-                eles farão de tudo para proporcionar essa oportunidade.
+                Desde então, a família concentra forças em arrecadar os recursos e em compartilhar a história do Davi,
+                para que mais pessoas abracem essa causa.
               </p>
             </div>
           </div>
@@ -91,12 +87,11 @@ const StorySection = () => {
           <div className="text-center">
             <Star className="w-8 h-8 text-davi-yellow mx-auto mb-4" />
             <blockquote className="text-xl lg:text-2xl text-davi-green-dark font-medium italic mb-6">
-              "Nosso filho é nossa maior força. Davi nos ensina todos os dias que mesmo diante das maiores dificuldades, 
-              é possível manter a esperança e o sorriso. Lutamos por ele, mas sabemos que não conseguimos sozinhos. 
-              Precisamos de vocês, precisamos de cada coração generoso que possa nos ajudar nesta batalha."
+              “Nosso filho é nossa maior força. Lutamos por ele e contamos com cada coração generoso que possa nos ajudar
+              nesta batalha.”
             </blockquote>
             <div className="text-davi-green-dark font-semibold">
-              <p>— Pais do Davi</p>
+              <p>Pais do Davi</p>
               <p className="text-sm text-gray-600 mt-1">Família em luta pela vida</p>
             </div>
           </div>

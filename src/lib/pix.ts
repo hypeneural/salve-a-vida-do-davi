@@ -9,7 +9,7 @@ type Params = {
 
 const crc16 = (str: string) => {
   let crc = 0xffff;
-  for (let c of str) {
+  for (const c of str) {
     crc ^= c.charCodeAt(0) << 8;
     for (let i = 0; i < 8; i++) {
       crc = crc & 0x8000 ? (crc << 1) ^ 0x1021 : crc << 1;

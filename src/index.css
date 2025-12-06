@@ -98,6 +98,21 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-davi-hero {
+    background: radial-gradient(circle at 20% 20%, rgba(112, 185, 68, 0.15), transparent 35%),
+      radial-gradient(circle at 80% 0%, rgba(58, 155, 220, 0.15), transparent 30%),
+      radial-gradient(circle at 50% 80%, rgba(253, 208, 0, 0.14), transparent 35%),
+      linear-gradient(135deg, #f8fafc 0%, #ffffff 60%, #f0f9ff 100%);
+  }
+
+  .bg-grid-davi {
+    background-image: linear-gradient(to right, rgba(33, 109, 44, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(58, 155, 220, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 }
