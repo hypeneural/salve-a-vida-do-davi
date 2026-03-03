@@ -3,7 +3,7 @@ import { Sparkles, Clock, DollarSign, Target } from 'lucide-react';
 
 const TreatmentSection = () => {
   return (
-    <section id="tratamento" className="py-16 sm:py-20 bg-gray-50">
+    <section id="tratamento" className="py-16 sm:py-20 bg-[#D5E57C]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-flex items-center px-4 py-2 rounded-full bg-davi-green-light/20 text-davi-green-dark text-sm font-medium mb-4">
@@ -16,8 +16,8 @@ const TreatmentSection = () => {
             para o futuro do Davi
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Terapia gênica aprovada que pode frear a progressão da DMD. O tempo ideal para aplicação é antes dos 7 anos —
-            exatamente a idade do Davi.
+            Terapia gênica aprovada que pode frear a progressão da DMD. O tempo é decisivo —
+            cada dia conta para preservar os músculos do Davi.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ const TreatmentSection = () => {
               <div className="bg-davi-green-light/10 p-4 rounded-lg border border-davi-green-light/30">
                 <p className="font-semibold text-davi-green-dark mb-2">Indicado para o Davi</p>
                 <p className="text-sm">
-                  Desenvolvido especificamente para DMD, com janela ideal antes dos 7 anos. Uma aplicação única pode
+                  Desenvolvido especificamente para DMD, deve ser aplicado o quanto antes. Uma aplicação única pode
                   trazer benefícios duradouros.
                 </p>
               </div>
@@ -94,13 +94,6 @@ const TreatmentSection = () => {
             </div>
 
             <div className="space-y-4">
-              <div className="bg-white p-4 rounded-lg border border-red-200">
-                <p className="font-semibold text-red-600 mb-2">Janela de oportunidade</p>
-                <p className="text-gray-700 text-sm">
-                  A aplicação é mais eficaz antes dos 7 anos, quando ainda há musculatura preservada.
-                </p>
-              </div>
-
               <p className="text-gray-700">
                 Cada mês que passa sem o Elevidys representa perda muscular irreversível. Começar logo é decisivo para
                 manter mobilidade e proteger coração e pulmões.

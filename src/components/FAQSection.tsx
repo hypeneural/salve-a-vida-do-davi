@@ -12,7 +12,7 @@ const FAQSection = () => {
     {
       question: 'Qual a idade limite para o tratamento?',
       answer:
-        'O Elevidys é mais eficaz antes dos 7 anos. O Davi está com 6 anos, então precisamos concluir a arrecadação e aplicar o tratamento o quanto antes.'
+        'O Elevidys é mais eficaz quando aplicado cedo. Precisamos concluir a arrecadação e aplicar o tratamento o quanto antes.'
     },
     {
       question: 'O tratamento Elevidys garante a cura?',
@@ -27,7 +27,7 @@ const FAQSection = () => {
     {
       question: 'Posso doar de outro país?',
       answer:
-        'Sim. Aceitamos doações internacionais via transferência bancária ou plataformas online. Fale conosco pelo WhatsApp ou email para orientações.'
+        'Sim. Aceitamos doações internacionais via transferência bancária ou plataformas online. Fale conosco pelo WhatsApp para orientações.'
     },
     {
       question: 'Como posso ajudar além de doar?',
@@ -91,14 +91,10 @@ const FAQSection = () => {
               Nossa equipe está pronta para ajudar. Entre em contato e responderemos o mais rápido possível.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto">
-              <div className="bg-white p-4 rounded-lg border border-davi-blue/30">
-                <h4 className="font-semibold text-davi-green-dark mb-2">Email</h4>
-                <p className="text-davi-blue text-sm">contato@salveavidadodavi.com</p>
-              </div>
+            <div className="max-w-sm mx-auto">
               <div className="bg-white p-4 rounded-lg border border-davi-green-light/30">
                 <h4 className="font-semibold text-davi-green-dark mb-2">WhatsApp</h4>
-                <p className="text-davi-green-light text-sm">(11) 99999-9999</p>
+                <p className="text-davi-green-light text-sm">(48) 99617-5837</p>
               </div>
             </div>
 

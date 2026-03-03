@@ -15,8 +15,9 @@ const DonationSection = () => {
   const [pixDialogOpen, setPixDialogOpen] = useState(false);
 
   const pixKey = '141.897.869-85';
-  const whatsappGroup = 'https://wa.me/5511999999999';
-  const vakinhaUrl = 'https://vaka.me/salveavidadodavi';
+  const whatsappGroup = 'https://chat.whatsapp.com/Hw1msaUqK7X80WUiJJUyde?mode=gi_t';
+  const vakinhaUrl = 'https://www.vakinha.com.br/vaquinha/salve-a-vida-de-davi-luiz-fernando-rodrigues-2';
+  const rifaUrl = 'https://loja.salveavidadedavi.com.br/campanha/camisa-da-sele-o-brasileira-autografada-pelo-neymar';
 
   const handleCopyPix = async () => {
     try {
@@ -41,7 +42,7 @@ const DonationSection = () => {
       name: 'WhatsApp',
       icon: FaWhatsapp,
       url: `https://wa.me/?text=${encodeURIComponent(
-        'Ajude a salvar a vida do Davi! Uma criança de 6 anos precisa do tratamento Elevidys contra a DMD. Saiba mais e doe: https://salveavidadodavi.com'
+        'Ajude a salvar a vida do Davi! Precisamos do tratamento Elevidys contra a DMD. Saiba mais e doe: https://salveavidadodavi.com'
       )}`,
       color: 'text-green-600 hover:bg-green-50'
     },
@@ -51,14 +52,6 @@ const DonationSection = () => {
       url: 'https://instagram.com',
       color: 'text-purple-600 hover:bg-purple-50'
     }
-  ];
-
-  const donationAmounts = [
-    { value: 20, description: 'Ajuda com medicamentos básicos', icon: '❤️' },
-    { value: 50, description: 'Contribui para exames médicos', icon: '✨' },
-    { value: 100, description: 'Apoia a família nas necessidades', icon: '🎁' },
-    { value: 500, description: 'Faz uma diferença significativa', icon: '🚀' },
-    { value: 1000, description: 'É um grande passo rumo à cura', icon: '💙' }
   ];
 
   return (
@@ -84,7 +77,7 @@ const DonationSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           <Card className="p-8 border-2 border-davi-green-light/30 bg-gradient-to-br from-davi-green-light/5 to-white">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-davi-green-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -160,16 +153,19 @@ const DonationSection = () => {
                 <h4 className="font-semibold text-davi-green-dark mb-2">Dados bancários</h4>
                 <div className="text-sm text-gray-700 space-y-1">
                   <p>
-                    <strong>Banco:</strong> Itaú
+                    <strong>Banco:</strong> Banco do Brasil
                   </p>
                   <p>
-                    <strong>Agência:</strong> 1234
+                    <strong>Agência:</strong> 5385-6
                   </p>
                   <p>
-                    <strong>Conta:</strong> 12345-6
+                    <strong>Conta Poupança:</strong> 11.564-9
                   </p>
                   <p>
-                    <strong>Titular:</strong> Família do Davi
+                    <strong>Variação:</strong> 51
+                  </p>
+                  <p>
+                    <strong>Titular:</strong> Davi Luiz Pellizzari Rodrigues
                   </p>
                 </div>
               </div>
@@ -184,34 +180,39 @@ const DonationSection = () => {
               </Button>
             </div>
           </Card>
-        </div>
 
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-davi-green-dark mb-6">Escolha o valor da sua doação</h3>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-            Cada valor tem um impacto real na vida do Davi. Clique e doe na vakinha.
-          </p>
+          <Card className="p-8 border-2 border-pink-300/30 bg-gradient-to-br from-pink-50/50 to-white">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-pink-100/60 rounded-full flex items-center justify-center mx-auto mb-4">
+                <AiOutlineGift className="w-8 h-8 text-pink-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-davi-green-dark mb-2">Rifa online</h3>
+              <p className="text-gray-600">Concorra a prêmios e ajude o Davi</p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {donationAmounts.map((amount) => (
+            <div className="space-y-4">
+              <p className="text-gray-700 mb-4">
+                Participe da nossa rifa online! Além de ajudar o Davi, você concorre a prêmios incríveis.
+              </p>
+
               <Button
-                key={amount.value}
-                onClick={() => window.open(vakinhaUrl, '_blank')}
-                className="bg-davi-yellow hover:bg-davi-yellow/90 text-davi-green-dark font-bold p-4 h-auto flex flex-col items-center gap-2 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                onClick={() => window.open(rifaUrl, '_blank')}
+                className="w-full bg-pink-500 hover:bg-pink-500/90 text-white font-bold py-3"
               >
-                <span className="text-2xl">{amount.icon}</span>
-                <span className="text-lg">R$ {amount.value}</span>
-                <span className="text-xs text-center leading-tight">{amount.description}</span>
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Participar da rifa
               </Button>
-            ))}
-          </div>
+            </div>
+          </Card>
         </div>
+
+
 
         <div className="mb-16">
           <Card className="bg-gradient-to-r from-davi-yellow/10 to-davi-blue/10 border border-davi-yellow/30 p-8">
             <div className="text-center mb-6">
               <FiShare2 className="w-12 h-12 text-davi-green-dark mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-davi-green-dark mb-4">Não pode doar agora? Compartilhe!</h3>
+              <h3 className="text-2xl font-bold text-davi-green-dark mb-4">Não pode doar agora? Ajude seguindo e compartilhando!</h3>
               <p className="text-gray-700 max-w-2xl mx-auto mb-6">
                 Sua rede pode chegar a quem tem condições de doar. Compartilhe a história do Davi e nos ajude a acelerar
                 essa meta.

@@ -7,13 +7,13 @@ const MediaSection = () => {
   const mediaItems = [
     {
       id: 1,
-      title: 'Família corre contra o tempo para salvar Davi Luiz, de 6 anos, com doença rara',
+      title: 'Família corre contra o tempo para salvar Davi Luiz, com doença rara',
       source: 'VIP Social',
       logo: 'https://www.vipsocial.com.br/images/logo42.png',
       url: 'https://www.vipsocial.com.br/noticia/familia-corre-contra-o-tempo-para-salvar-davi-luiz-de-6-anos-com-doenca-rara/51462',
       date: '2024-12-08',
       summary:
-        'Reportagem especial sobre a arrecadação para o Elevidys e a urgência do tratamento antes dos 7 anos.',
+        'Reportagem especial sobre a arrecadação para o Elevidys e a urgência do tratamento o quanto antes.',
       category: 'Reportagem',
       type: 'article'
     },
@@ -73,7 +73,7 @@ const MediaSection = () => {
   };
 
   return (
-    <section id="midia" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section id="midia" className="py-16 sm:py-20 bg-gradient-to-br from-[#D5E57C] to-[#D5E57C]/90">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-davi-blue/10 text-davi-blue text-sm font-medium mb-4">
@@ -105,11 +105,10 @@ const MediaSection = () => {
                     <CardHeader className="pb-4">
                       <div className="flex items-start justify-between gap-4 mb-3">
                         <span
-                          className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                            item.type === 'video'
-                              ? 'bg-red-100 text-red-700'
-                              : 'bg-davi-yellow/20 text-davi-green-dark'
-                          }`}
+                          className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${item.type === 'video'
+                            ? 'bg-red-100 text-red-700'
+                            : 'bg-davi-yellow/20 text-davi-green-dark'
+                            }`}
                         >
                           {item.type === 'video' && <Play className="w-3 h-3 mr-1" />}
                           {item.category}
@@ -171,11 +170,11 @@ const MediaSection = () => {
               Ajude a amplificar a história do Davi e acelerar a campanha. Entre em contato para pautas e entrevistas.
             </p>
             <Button
-              onClick={() => window.open('mailto:contato@exemplo.com?subject=Cobertura da Campanha do Davi', '_blank')}
+              onClick={() => window.open('https://wa.me/5548996175837?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20a%20cobertura%20da%20campanha%20do%20Davi', '_blank')}
               variant="outline"
               className="border-davi-green-dark text-davi-green-dark hover:bg-davi-green-dark hover:text-white font-semibold px-8 py-3"
             >
-              Entrar em contato
+              Falar pelo WhatsApp
             </Button>
           </div>
         </div>

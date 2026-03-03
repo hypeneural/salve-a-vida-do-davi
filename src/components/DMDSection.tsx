@@ -4,7 +4,7 @@ import { AlertTriangle, Clock, Heart, TrendingDown } from 'lucide-react';
 const DMDSection = () => {
   const stages = [
     {
-      age: '0-6 anos',
+      age: '0-7 anos',
       symptoms: 'Dificuldade para correr, subir escadas e quedas frequentes',
       impact: 'Brincadeiras ficam mais limitadas',
       color: 'davi-yellow'
@@ -58,7 +58,7 @@ const DMDSection = () => {
               </p>
               <p>
                 <strong>Como afeta o Davi:</strong> cada dia sem tratamento significa perda muscular irreversível. O
-                Elevidys é a chance de frear esse processo antes dos 7 anos.
+                Elevidys é a chance de frear esse processo o quanto antes.
               </p>
             </div>
           </Card>
@@ -84,10 +84,7 @@ const DMDSection = () => {
 
               <p>
                 <strong>Por que agir agora:</strong> Davi ainda anda e brinca, mas a doença já limita seu ritmo. Sem o
-                tratamento, a perda de força se acelera, e a janela ideal termina aos 7 anos.
-              </p>
-              <p className="text-red-600 font-semibold">
-                Cada mês sem tratamento reduz as chances de preservar a mobilidade e a saúde cardíaca e respiratória.
+                tratamento, a perda de força se acelera.
               </p>
             </div>
           </Card>
@@ -105,28 +102,25 @@ const DMDSection = () => {
             {stages.map((stage, index) => (
               <Card
                 key={stage.age}
-                className={`p-6 border-2 ${
-                  index === 0
-                    ? 'border-davi-yellow/30 bg-davi-yellow/5'
-                    : index === 1
+                className={`p-6 border-2 ${index === 0
+                  ? 'border-davi-yellow/30 bg-davi-yellow/5'
+                  : index === 1
                     ? 'border-davi-blue/30 bg-davi-blue/5'
                     : 'border-red-300 bg-red-50'
-                }`}
+                  }`}
               >
                 <div className="text-center mb-4">
                   <div
-                    className={`w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center ${
-                      index === 0 ? 'bg-davi-yellow/20' : index === 1 ? 'bg-davi-blue/20' : 'bg-red-100'
-                    }`}
+                    className={`w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center ${index === 0 ? 'bg-davi-yellow/20' : index === 1 ? 'bg-davi-blue/20' : 'bg-red-100'
+                      }`}
                   >
                     <Clock
-                      className={`w-6 h-6 ${
-                        index === 0 ? 'text-davi-green-dark' : index === 1 ? 'text-davi-blue' : 'text-red-600'
-                      }`}
+                      className={`w-6 h-6 ${index === 0 ? 'text-davi-green-dark' : index === 1 ? 'text-davi-blue' : 'text-red-600'
+                        }`}
                     />
                   </div>
                   <h4 className="text-xl font-bold text-gray-800">{stage.age}</h4>
-                  {index === 0 && (
+                  {index === 1 && (
                     <span className="inline-block px-3 py-1 bg-davi-green-dark text-white text-xs rounded-full font-semibold mt-2">
                       Davi está aqui
                     </span>

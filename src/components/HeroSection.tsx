@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import ProgressBar from './ProgressBar';
 import { Heart, Clock, Users } from 'lucide-react';
 
 const HeroSection = () => {
@@ -11,8 +10,6 @@ const HeroSection = () => {
     }
   };
 
-  const currentAmount = 52855.92;
-  const targetAmount = 17000000;
 
   return (
     <section
@@ -41,10 +38,11 @@ const HeroSection = () => {
                 Você pode me ajudar a ter uma chance de viver?
               </h1>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                O Davi tem 6 anos e foi diagnosticado com{' '}
-                <strong className="text-davi-green-dark">Distrofia Muscular de Duchenne (DMD)</strong>.
-                Precisamos arrecadar <strong className="text-davi-blue">R$ 17 milhões</strong> para o
-                tratamento Elevidys — a única chance de frear a doença antes dos 7 anos.
+                Conheça a história do Davi, um menino alegre que foi diagnosticado com{' '}
+                <strong className="text-davi-green-dark">Distrofia Muscular de Duchenne (DMD)</strong>,
+                uma doença rara e grave. Precisamos arrecadar{' '}
+                <strong className="text-davi-blue">R$ 17 milhões</strong> para o tratamento com Elevidys,
+                a única esperança para frear a progressão da doença antes que seja tarde demais.
               </p>
             </div>
 
@@ -68,7 +66,7 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:gap-6 justify-center lg:justify-start text-left sm:text-center">
+            <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-left sm:text-center">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-full bg-davi-blue/15 flex items-center justify-center">
                   <Users className="w-5 h-5 text-davi-blue" />
@@ -76,16 +74,6 @@ const HeroSection = () => {
                 <div>
                   <p className="text-xs text-gray-600 uppercase tracking-wide">Apoiadores</p>
                   <p className="font-bold text-davi-green-dark text-lg">250+</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-full bg-davi-yellow/15 flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-davi-green-dark" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-600 uppercase tracking-wide">Idade limite</p>
-                  <p className="font-bold text-davi-green-dark text-lg">7 anos</p>
                 </div>
               </div>
             </div>
@@ -110,23 +98,15 @@ const HeroSection = () => {
 
               <div className="text-center space-y-1 mb-6">
                 <p className="text-davi-green-dark font-semibold text-lg">Davi Luiz Pellizzari Rodrigues</p>
-                <p className="text-gray-600 text-sm">Canelinha / SC • 6 anos</p>
+                <p className="text-gray-600 text-sm">Canelinha / SC</p>
                 <p className="text-gray-600 text-sm">Diagnosticado com DMD</p>
                 <p className="text-davi-blue text-sm font-medium">Pix: CPF 141.897.869-85</p>
               </div>
 
-              <div className="text-center mb-5">
-                <h3 className="text-xl font-bold text-davi-green-dark mb-1">Progresso da campanha</h3>
-                <p className="text-gray-600 text-sm">Cada doação nos aproxima do tratamento</p>
-              </div>
-
-              <ProgressBar current={currentAmount} target={targetAmount} className="mb-5" />
-
               <div className="bg-gradient-to-r from-davi-yellow/15 to-davi-blue/10 border border-davi-yellow/30 rounded-lg p-4 text-center">
-                <p className="text-sm font-semibold text-davi-green-dark mb-1">
-                  URGENTE: Tratamento deve ser aplicado antes dos 7 anos
+                <p className="text-sm font-semibold text-davi-green-dark">
+                  Cada dia conta na luta pela vida do Davi
                 </p>
-                <p className="text-xs text-gray-600">Cada dia conta na luta pela vida do Davi</p>
               </div>
             </Card>
           </div>

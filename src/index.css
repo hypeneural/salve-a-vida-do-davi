@@ -98,7 +98,7 @@
   }
 
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    @apply bg-[#D5E57C] text-gray-900 antialiased;
   }
 }
 
@@ -115,4 +115,98 @@
       linear-gradient(to bottom, rgba(58, 155, 220, 0.05) 1px, transparent 1px);
     background-size: 28px 28px;
   }
+}
+
+/* ===== MOBILE-FIRST & NATIVE-LIKE ===== */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Minimum 44px touch targets */
+button,
+a,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Native-like active press states */
+button:active,
+a:active,
+[role="button"]:active {
+  transform: scale(0.97);
+  transition: transform 0.08s ease-out;
+}
+
+/* Prevent iOS input zoom (16px minimum) */
+input,
+select,
+textarea {
+  font-size: 16px !important;
+}
+
+/* Smooth, elevated cards for native feel */
+.mobile-card {
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Sticky bottom CTA - native app feel */
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  padding: 0.75rem 1rem;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sticky-cta-bar.hidden {
+  transform: translateY(100%);
+}
+
+/* Hide sticky CTA on large screens */
+@media (min-width: 1024px) {
+  .sticky-cta-bar {
+    display: none;
+  }
+}
+
+/* Better spacing for mobile sections */
+@media (max-width: 640px) {
+  section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* Momentum scrolling on iOS */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(112, 185, 68, 0.3);
+  color: #216D2C;
 }

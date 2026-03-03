@@ -37,7 +37,7 @@ const Footer = () => {
               <Card className="bg-gray-800 p-4">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-5 h-5" />
-                  <span>(11) 99999-9999</span>
+                  <span>(48) 99617-5837</span>
                 </div>
               </Card>
               <Card className="bg-gray-800 p-4">
@@ -63,7 +63,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5548996175837"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-300 hover:text-davi-green-light transition-colors"
