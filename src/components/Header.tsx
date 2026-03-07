@@ -33,8 +33,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100/80'
-          : 'bg-white/90 backdrop-blur-sm border-b border-white/60'
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100/80'
+        : 'bg-white/90 backdrop-blur-sm border-b border-white/60'
         }`}
     >
       <div className="container mx-auto px-4 py-3 sm:py-4">
@@ -67,7 +67,7 @@ const Header = () => {
           <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="hidden sm:flex items-center space-x-2">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/salveavidadedavi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-gray-600 hover:text-davi-blue transition-colors duration-200"
@@ -117,7 +117,7 @@ const Header = () => {
               ))}
               <div className="flex items-center space-x-4 pt-3 border-t border-gray-100">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/salveavidadedavi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-600 hover:text-davi-blue transition-colors duration-200"

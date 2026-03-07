@@ -17,6 +17,17 @@ const LINKS = [
         pulse: true,
     },
     {
+        id: 'instagram',
+        label: 'Instagram',
+        sublabel: 'Acompanhe nossa rotina e atualizações',
+        url: 'https://www.instagram.com/salveavidadedavi',
+        icon: ExternalLink,
+        gradient: 'from-pink-500 to-purple-600',
+        bg: 'bg-pink-500/10',
+        border: 'border-pink-500/20',
+        iconBg: 'bg-pink-500',
+    },
+    {
         id: 'site',
         label: 'Site oficial',
         sublabel: 'Conheça a história completa do Davi',

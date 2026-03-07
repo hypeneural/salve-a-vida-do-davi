@@ -30,12 +30,6 @@ const Footer = () => {
             <div className="space-y-4">
               <Card className="bg-gray-800 p-4">
                 <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-5 h-5" />
-                  <span>familia@salveavidadodavi.com</span>
-                </div>
-              </Card>
-              <Card className="bg-gray-800 p-4">
-                <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-5 h-5" />
                   <span>(48) 99617-5837</span>
                 </div>
@@ -53,7 +47,7 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-6 text-davi-yellow">Siga a campanha</h4>
             <div className="space-y-4 mb-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/salveavidadedavi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-300 hover:text-davi-blue transition-colors"
@@ -73,12 +67,6 @@ const Footer = () => {
               </a>
             </div>
 
-            <a href="/transparencia" className="text-gray-300 hover:text-davi-yellow transition-colors block mb-4">
-              Transparência
-            </a>
-            <a href="/faq" className="text-gray-300 hover:text-davi-yellow transition-colors block">
-              FAQ
-            </a>
           </div>
         </div>
 
